@@ -5,7 +5,7 @@
     <title>Casino Mini WebApp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts для стильной типографики -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap">
     <!-- Стили -->
     <style>
         body {
@@ -17,24 +17,24 @@
         }
         .container {
             text-align: center;
-            padding: 20px;
+            padding: 10px; /* Уменьшены отступы */
         }
         .header {
             background-color: #1F2833;
-            padding: 20px;
+            padding: 10px; /* Уменьшены отступы */
             border-bottom: 2px solid #66FCF1;
         }
         .header h1 {
             margin: 0;
             color: #66FCF1;
-            font-size: 2.5em;
+            font-size: 1.8em; /* Уменьшен размер шрифта */
         }
         .balance {
-            margin-top: 30px;
-            font-size: 1.5em;
+            margin-top: 15px; /* Уменьшены отступы */
+            font-size: 1.2em; /* Уменьшен размер шрифта */
         }
         .game-selection {
-            margin-top: 40px;
+            margin-top: 20px; /* Уменьшены отступы */
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -42,10 +42,10 @@
         .game-card {
             background-color: #1F2833;
             border: 1px solid #66FCF1;
-            border-radius: 10px;
-            width: 120px; /* Уменьшена ширина карточки */
-            margin: 10px; /* Уменьшены отступы */
-            padding: 10px; /* Уменьшены внутренние отступы */
+            border-radius: 5px; /* Уменьшен радиус */
+            width: 80px; /* Сильно уменьшена ширина карточки */
+            margin: 5px; /* Уменьшены отступы */
+            padding: 5px; /* Уменьшены внутренние отступы */
             transition: transform 0.2s;
             cursor: pointer;
         }
@@ -54,31 +54,33 @@
         }
         .game-card img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 5px;
         }
         .game-card h3 {
             color: #66FCF1;
-            margin: 10px 0 5px; /* Уменьшены отступы */
-            font-size: 1em; /* Уменьшен размер шрифта */
-        }
-        .game-card p {
+            margin: 5px 0 3px; /* Уменьшены отступы */
             font-size: 0.8em; /* Уменьшен размер шрифта */
         }
+        .game-card p {
+            font-size: 0.6em; /* Уменьшен размер шрифта */
+            margin: 0; /* Убраны отступы */
+        }
         .footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 20px; /* Уменьшены отступы */
+            padding: 10px; /* Уменьшены отступы */
             background-color: #1F2833;
             color: #C5C6C7;
+            font-size: 0.8em; /* Уменьшен размер шрифта */
         }
         .button {
             background-color: #66FCF1;
             color: #0B0C10;
             border: none;
-            padding: 10px 20px; /* Уменьшены отступы */
-            font-size: 1em;
+            padding: 8px 15px; /* Уменьшены отступы */
+            font-size: 0.9em; /* Уменьшен размер шрифта */
             border-radius: 5px;
             cursor: pointer;
-            margin: 15px 5px; /* Уменьшены отступы */
+            margin: 10px 5px; /* Уменьшены отступы */
             transition: background-color 0.2s;
         }
         .button:hover {
@@ -86,15 +88,15 @@
         }
         @media (max-width: 600px) {
             .game-card {
-                width: 45%; /* Две карточки в ряд на маленьких экранах */
+                width: 22%; /* Больше карточек в ряд на маленьких экранах */
             }
             .game-selection {
-                justify-content: space-around;
+                justify-content: center;
             }
         }
         @media (max-width: 400px) {
             .game-card {
-                width: 100%; /* Одна карточка в ряд на очень маленьких экранах */
+                width: 30%; /* Подстраиваемся под очень маленькие экраны */
             }
         }
     </style>
@@ -122,40 +124,40 @@
     <div class="game-selection">
         <!-- Карточка игры "Слот-машина" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Slots" alt="Slot Machine">
-            <h3>Slot Machine</h3>
-            <p>Try your luck!</p>
+            <img src="https://via.placeholder.com/80x50.png?text=Slots" alt="Slot Machine">
+            <h3>Slots</h3>
         </div>
         <!-- Карточка игры "Блэкджек" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Blackjack" alt="Blackjack">
+            <img src="https://via.placeholder.com/80x50.png?text=Blackjack" alt="Blackjack">
             <h3>Blackjack</h3>
-            <p>Beat the dealer!</p>
         </div>
         <!-- Карточка игры "Рулетка" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Roulette" alt="Roulette">
+            <img src="https://via.placeholder.com/80x50.png?text=Roulette" alt="Roulette">
             <h3>Roulette</h3>
-            <p>Spin the wheel!</p>
         </div>
         <!-- Карточка игры "Покер" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Poker" alt="Poker">
+            <img src="https://via.placeholder.com/80x50.png?text=Poker" alt="Poker">
             <h3>Poker</h3>
-            <p>Show your skills!</p>
         </div>
-        <!-- Добавим еще несколько игр для примера -->
-        <!-- Карточка игры "Баккара" -->
+        <!-- Добавлены дополнительные игры -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Baccarat" alt="Baccarat">
+            <img src="https://via.placeholder.com/80x50.png?text=Baccarat" alt="Baccarat">
             <h3>Baccarat</h3>
-            <p>High stakes!</p>
         </div>
-        <!-- Карточка игры "Крэпс" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/100x60.png?text=Craps" alt="Craps">
+            <img src="https://via.placeholder.com/80x50.png?text=Craps" alt="Craps">
             <h3>Craps</h3>
-            <p>Roll the dice!</p>
+        </div>
+        <div class="game-card">
+            <img src="https://via.placeholder.com/80x50.png?text=Keno" alt="Keno">
+            <h3>Keno</h3>
+        </div>
+        <div class="game-card">
+            <img src="https://via.placeholder.com/80x50.png?text=Scratch+Cards" alt="Scratch Cards">
+            <h3>Scratch Cards</h3>
         </div>
     </div>
 
