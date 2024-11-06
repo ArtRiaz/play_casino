@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Casino Mini WebApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts для стильной типографики -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Стили -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0B0C10;
+            color: #C5C6C7;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .header {
+            background-color: #1F2833;
+            padding: 20px;
+            border-bottom: 2px solid #66FCF1;
+        }
+        .header h1 {
+            margin: 0;
+            color: #66FCF1;
+            font-size: 2.5em;
+        }
+        .balance {
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        .game-selection {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .game-card {
+            background-color: #1F2833;
+            border: 1px solid #66FCF1;
+            border-radius: 10px;
+            width: 200px;
+            margin: 15px;
+            padding: 20px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .game-card h3 {
+            color: #66FCF1;
+            margin: 15px 0 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #1F2833;
+            color: #C5C6C7;
+        }
+        .button {
+            background-color: #66FCF1;
+            color: #0B0C10;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 10px;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #45A29E;
+        }
+        @media (max-width: 600px) {
+            .game-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Раздел заголовка -->
+    <div class="header">
+        <h1>Lucky Casino</h1>
+    </div>
+
+    <!-- Отображение баланса -->
+    <div class="balance">
+        <p>Your Balance: <strong>$1,000.00</strong></p>
+    </div>
+
+    <!-- Кнопки действий -->
+    <div>
+        <button class="button">Deposit</button>
+        <button class="button">Withdraw</button>
+    </div>
+
+    <!-- Выбор игр -->
+    <div class="game-selection">
+        <!-- Карточка игры "Слот-машина" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/180x100.png?text=Slots" alt="Slot Machine">
+            <h3>Slot Machine</h3>
+            <p>Try your luck with our exciting slots!</p>
+        </div>
+        <!-- Карточка игры "Блэкджек" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/180x100.png?text=Blackjack" alt="Blackjack">
+            <h3>Blackjack</h3>
+            <p>Beat the dealer and win big!</p>
+        </div>
+        <!-- Карточка игры "Рулетка" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/180x100.png?text=Roulette" alt="Roulette">
+            <h3>Roulette</h3>
+            <p>Place your bets and spin the wheel!</p>
+        </div>
+        <!-- Карточка игры "Покер" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/180x100.png?text=Poker" alt="Poker">
+            <h3>Poker</h3>
+            <p>Join the table and show your skills!</p>
+        </div>
+    </div>
+
+    <!-- Раздел подвала -->
+    <div class="footer">
+        <p>&copy; 2023 Lucky Casino. All rights reserved.</p>
+    </div>
+</div>
+
+<!-- Инициализация Telegram Web App -->
+<script>
+    if (window.Telegram.WebApp) {
+        window.Telegram.WebApp.expand();
+    }
+</script>
+
+</body>
+</html>
 
