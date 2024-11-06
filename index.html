@@ -43,9 +43,9 @@
             background-color: #1F2833;
             border: 1px solid #66FCF1;
             border-radius: 10px;
-            width: 200px;
-            margin: 15px;
-            padding: 20px;
+            width: 120px; /* Уменьшена ширина карточки */
+            margin: 10px; /* Уменьшены отступы */
+            padding: 10px; /* Уменьшены внутренние отступы */
             transition: transform 0.2s;
             cursor: pointer;
         }
@@ -58,7 +58,11 @@
         }
         .game-card h3 {
             color: #66FCF1;
-            margin: 15px 0 10px;
+            margin: 10px 0 5px; /* Уменьшены отступы */
+            font-size: 1em; /* Уменьшен размер шрифта */
+        }
+        .game-card p {
+            font-size: 0.8em; /* Уменьшен размер шрифта */
         }
         .footer {
             margin-top: 50px;
@@ -70,11 +74,11 @@
             background-color: #66FCF1;
             color: #0B0C10;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px; /* Уменьшены отступы */
             font-size: 1em;
             border-radius: 5px;
             cursor: pointer;
-            margin: 20px 10px;
+            margin: 15px 5px; /* Уменьшены отступы */
             transition: background-color 0.2s;
         }
         .button:hover {
@@ -82,7 +86,15 @@
         }
         @media (max-width: 600px) {
             .game-card {
-                width: 100%;
+                width: 45%; /* Две карточки в ряд на маленьких экранах */
+            }
+            .game-selection {
+                justify-content: space-around;
+            }
+        }
+        @media (max-width: 400px) {
+            .game-card {
+                width: 100%; /* Одна карточка в ряд на очень маленьких экранах */
             }
         }
     </style>
@@ -110,27 +122,40 @@
     <div class="game-selection">
         <!-- Карточка игры "Слот-машина" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/180x100.png?text=Slots" alt="Slot Machine">
+            <img src="https://via.placeholder.com/100x60.png?text=Slots" alt="Slot Machine">
             <h3>Slot Machine</h3>
-            <p>Try your luck with our exciting slots!</p>
+            <p>Try your luck!</p>
         </div>
         <!-- Карточка игры "Блэкджек" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/180x100.png?text=Blackjack" alt="Blackjack">
+            <img src="https://via.placeholder.com/100x60.png?text=Blackjack" alt="Blackjack">
             <h3>Blackjack</h3>
-            <p>Beat the dealer and win big!</p>
+            <p>Beat the dealer!</p>
         </div>
         <!-- Карточка игры "Рулетка" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/180x100.png?text=Roulette" alt="Roulette">
+            <img src="https://via.placeholder.com/100x60.png?text=Roulette" alt="Roulette">
             <h3>Roulette</h3>
-            <p>Place your bets and spin the wheel!</p>
+            <p>Spin the wheel!</p>
         </div>
         <!-- Карточка игры "Покер" -->
         <div class="game-card">
-            <img src="https://via.placeholder.com/180x100.png?text=Poker" alt="Poker">
+            <img src="https://via.placeholder.com/100x60.png?text=Poker" alt="Poker">
             <h3>Poker</h3>
-            <p>Join the table and show your skills!</p>
+            <p>Show your skills!</p>
+        </div>
+        <!-- Добавим еще несколько игр для примера -->
+        <!-- Карточка игры "Баккара" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/100x60.png?text=Baccarat" alt="Baccarat">
+            <h3>Baccarat</h3>
+            <p>High stakes!</p>
+        </div>
+        <!-- Карточка игры "Крэпс" -->
+        <div class="game-card">
+            <img src="https://via.placeholder.com/100x60.png?text=Craps" alt="Craps">
+            <h3>Craps</h3>
+            <p>Roll the dice!</p>
         </div>
     </div>
 
@@ -149,4 +174,3 @@
 
 </body>
 </html>
-
